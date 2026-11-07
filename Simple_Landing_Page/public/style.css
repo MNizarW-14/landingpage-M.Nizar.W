@@ -1,0 +1,309 @@
+/* Reset & Base Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #050b14;
+    --card-bg: #091224;
+    --text-white: #ffffff;
+    --text-muted: #94a3b8;
+    --accent-cyan: #38bdf8;
+    --border-color: rgba(56, 189, 248, 0.2);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header Navbar */
+.navbar {
+    width: 100%;
+    padding: 24px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--accent-cyan);
+}
+
+/* Hero Section */
+.hero {
+    padding: 140px 0 60px;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 580px;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--accent-cyan);
+    margin-bottom: 24px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--text-white);
+}
+
+/* Warna Solid Tanpa Gradasi untuk Nama */
+.gradient-name {
+    color: var(--accent-cyan);
+}
+
+.hero-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 480px;
+}
+
+/* Circular Image dengan efek hover garis cyan */
+.hero-image-container {
+    flex-shrink: 0;
+}
+
+.circle-image-wrapper {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.circle-image-wrapper:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+}
+
+.circle-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Section Title Divider */
+.divider-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 60px 0;
+}
+
+.divider-title .line {
+    height: 1px;
+    width: 100px;
+    background-color: rgba(56, 189, 248, 0.3);
+}
+
+.divider-title h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+/* Areas of Interest Section */
+.focus-section {
+    padding: 40px 0 100px;
+}
+
+.section-subtitle {
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-white);
+}
+
+.focus-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* Interaktif Card: Efek garis tepi Cyan saat di-hover */
+.focus-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 32px 28px;
+    transition: all 0.3s ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.card-badge {
+    display: inline-block;
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent-cyan);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.focus-card h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-white);
+}
+
+.focus-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Technical Skills Section */
+.tech-skills-block {
+    margin-top: 64px;
+}
+
+.tech-tags-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Interaktif Tag: Berubah menyala cyan saat di-hover */
+.tech-tag {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tech-tag:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    background-color: rgba(56, 189, 248, 0.05);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid rgba(56, 189, 248, 0.2);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 868px) {
+    .hero-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-desc {
+        margin: 0 auto;
+    }
+
+    .circle-image-wrapper {
+        width: 240px;
+        height: 240px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Styling khusus untuk link Google Drive */
+.drive-link {
+    color: var(--accent-cyan);
+    text-decoration: underline;
+    font-size: 0.85rem;
+    word-break: break-all;
+    transition: opacity 0.3s ease;
+}
+
+.drive-link:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.experience-list-text li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
